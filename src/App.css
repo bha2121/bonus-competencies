@@ -1,0 +1,109 @@
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.square {
+  animation: square-spin infinite 20s linear;
+  height: 20rem;
+  pointer-events: none;
+  width: 20rem;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-shadow: rgb(251, 255, 0) 0px 10px 20px;
+  font-size: 2rem
+}
+
+
+@keyframes square-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.circle {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  background: linear-gradient(to right, #ff70a6, #ff9770, #ffd670, #e9ff70)
+}
+
+.josh1{
+  width: 25rem;
+}
+
+.josh1 img {
+  height: 20rem;
+  width: 20rem;
+  margin: 0 0 0 8rem;
+}
+
+.josh1 img:hover{
+  transform: scale(1.1)
+}
+
+.josh2{
+  width: 25rem
+}
+
+.josh2 img {
+  height: 20rem;
+  width: 20rem;
+  margin: 0 0 0 5rem;
+  transition: width 3s;
+}
+
+.josh2 img:hover {
+  width: 15rem
+}
+
+.square2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 20rem;
+  width: 20rem;
+  margin: 5rem 0 0 5rem;
+  background: orange;
+  box-shadow: 0 14px 28px 0 rgba(0,0,0, .25),
+              0 10px 10px 0 rgba(0,0,0, .26);
+}
+
+
+.square2 :nth-child(1):focus {
+  background: red;
+  color: white;
+}
+
+.square2 :nth-child(1):focus::placeholder {
+  color: white;
+}
+
+.square2 input:disabled {
+  background: rgb(209, 208, 208)
+  
+}
+
+.square2 input:enabled{
+  background: yellow
+}
